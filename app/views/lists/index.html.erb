@@ -1,0 +1,25 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1625&q=80);">
+  <div class="container">
+    <h1>Save any kind of movies!</h1>
+    <p>Change your life with amazing movies!</p>
+    <a class="btn btn-light rounded-pill mr-3" href="#content">Experience existing lists</a>
+    <a class="btn btn-outline-light rounded-pill mx-2" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdropList">+ Add List</a>
+  </div>
+</div>
+
+<div id="content" class="container text-center my-3">
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-12 col-sm-6 col-lg-4 mb-3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2059&q=80" class="card-img-top" alt="<%= list.name %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= list.name %></h5>
+            <%= link_to "View List", list_path(list), class: "btn btn-outline-dark rounded-pill" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <button type="button" class="btn btn-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdropList">+ Add a new List</button>
+</div>

@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(0, 0, 0);
+  color: white
+}
+
+a.nav-link, span.navbar-toggler-icon {
+  filter: invert(1);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +14,11 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  filter: invert(1);
+}
+
+a.dropdown-item:active {
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: grey;
 }
