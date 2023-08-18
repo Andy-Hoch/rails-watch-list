@@ -11,6 +11,7 @@ class ListsController < ApplicationController
   def show
     @bookmarks = Bookmark.all
     @bookmark = Bookmark.new
+    # raise
   end
 
   def new

@@ -1,0 +1,29 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="/lists">
+      <img src="https://cdn-icons-png.flaticon.com/512/2824/2824496.png" />
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">All Lists</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/lists">All Lists</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <% @all_lists.each do |list| %>
+                <li><%= link_to list.name, list_path(list), class: "dropdown-item" %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdropMovie">+ Add Movie</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
