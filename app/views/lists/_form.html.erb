@@ -1,4 +1,5 @@
 <%= simple_form_for(list) do |f| %>
 	<%= f.input :name %>
+  <%= f.input :photo, as: :file, label: 'Add a coverphoto for the list' %>
 	<%= f.submit "Create", class: "btn btn-dark rounded-pill"%>
 <% end %>

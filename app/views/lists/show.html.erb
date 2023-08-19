@@ -1,5 +1,5 @@
 <%= render "layouts/movienavbar" %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2059&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= @img_url %>);">
   <div class="container">
     <h1 class="my-3"><%= @list.name %></h1>
     <a class="btn btn-light rounded-pill mr-3" href="#content">Experience this list</a>

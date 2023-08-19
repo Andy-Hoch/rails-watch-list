@@ -13,7 +13,11 @@
     <% @lists.each do |list| %>
       <div class="col-12 col-sm-6 col-lg-4 mb-3">
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2059&q=80" class="card-img-top" alt="<%= list.name %>">
+          <% if list.photo.key.nil? %>
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2059&q=80" class="card-img-top" alt="<%= list.name %>">
+          <% else %>
+            <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fit, class: "card-img-top", alt: list.name %>
+          <% end %>
           <div class="card-body">
             <h5 class="card-title"><%= list.name %></h5>
             <%= link_to "View List", list_path(list), class: "btn btn-outline-dark rounded-pill" %>
